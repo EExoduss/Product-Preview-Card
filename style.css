@@ -89,7 +89,7 @@ ol {
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 705px){
 
 
 
@@ -101,6 +101,7 @@ body{
       display: flex;
       flex-direction: column;
 
+      align-items: center;
       justify-content: center;
       
 
@@ -108,7 +109,8 @@ body{
 }
 
 .card{
-
+      max-width: 25rem;
+      height: 90vh;
       display: flex;
       flex-direction: column;
 
@@ -117,30 +119,42 @@ body{
       border-radius: 1rem;
 }
 
+.card__img-container-mobile{
+      display: block;
+
+       max-width: 30rem;
+       width: 100%;
+}
+
+.card__img-container-desktop{
+      display: none;
+}
 
 .card__img-mobile{
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
 
-
+     
 }
 
-.card__img-desktop{
-      display: none;
-}
+
 
 .card__content{
       padding: 1.5rem 1rem;
 
+      flex: 1;
+
       display: flex;
       flex-direction: column;
 
+      border: 1px solid red;
       justify-content: space-between;
 
       gap: 1vh;
 }
 
 .card__content-subtitle{
+      letter-spacing: 0.6rem;
       color: var(--Grey);
 }
 
@@ -216,7 +230,7 @@ body{
 
 
 
-@media(min-width: 650px){
+@media(min-width: 705px){
 
       /* padding and margin reset */
 
@@ -232,62 +246,65 @@ body{
 
       .card{
             max-width: 50rem;
-            max-height: 40rem;
             
             display: flex;
 
             background-color: white;
             
-            border-radius: 1rem;
-      }
-
-      .card > *{ /* CHILDS ARE .card__img-container and .card__content */
-            flex: 1;
-            flex-grow: 1;
+            border-radius: 1rem;    
+            overflow: hidden;
       }
 
 
-
-      .card__img-mobile{
+      .card__img-container-mobile{
             display: none;
       }
 
-      .card__img-container{
+      .card__img-container-desktop{
+            display: block;
             
+            flex: 1;
+
+            height: 100%;
+
+    
+
       }
 
-
       .card__img-desktop{
-         
-            display: block;
 
-            border-top-left-radius: 1rem;
-            border-bottom-left-radius: 1rem;
-          
       }
 
       .card__content{
-            padding: 2rem 4rem;
+            padding: 2rem 3rem;
 
+            flex:1;
             display: flex;
             flex-direction: column;
 
+            gap: 1rem;
+
             justify-content: space-between;
+
       }
 
 
       .card__content-subtitle{
+            letter-spacing: 0.6rem;
+
+            font-size: clamp(1rem, 1vw, 3rem);
+
             color: var(--Grey);
       }
 
       .card__content-title{
             font-family: "Fraunces";
-            font-size: clamp(1rem, 5vh, 4rem);
+            font-size: clamp(0.5rem, 2rem, 4rem);
       }
 
       .card__content-description{
             line-height: 1.5rem;
-            font-size: 1.02rem;
+            font-size: clamp(0.5rem, 1rem, 2rem);
             font-weight: 500;
             color: var(--Grey);
       }
