@@ -293,12 +293,12 @@ body{
       }
 
       .card__price{
-      display: flex;
+            display: flex;
 
-      align-items: center;
+            align-items: center;
 
-      gap: 1.2rem;
-}
+            gap: 1.2rem;
+      }
 
       .card__price-discount{
             font-size: 2rem;
