@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+      /* ## Colors
+
+      ### Primary */
+
+      --Green-500: hsl(158, 36%, 37%);
+      --Green-700: hsl(158, 42%, 18%);
+
+      /* ### Neutral */
+
+      --Black: hsl(212, 21%, 14%);
+      --Grey: hsl(228, 12%, 48%);
+      --Cream: hsl(30, 38%, 92%);
+      --White: hsl(0, 0%, 100%);
+
+
+      /* FONT SIZE */
+      --Font-size: 14px;
+
+      /* FONT FAMILY */
+      /* "Montserrat" */
+      /* "Fraunces" */
+}
+
+/* 1. Reset base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+/* 2. Imposta font base e altezza riga */
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color, white);
+  color: var(--text-color, black);
+}
+
+/* 3. Rimuove decorazioni inutili */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 4. Rende immagini e video reattivi */
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Disabilita il default degli input */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 6. Disabilita lista marker */
+ul,
+ol {
+  list-style: none;
+
+}
+
+
+
+
+
+/* MIO STILE MOBILE */
+
+*{
+      font-family: "Montserrat", sans-serif;
+}
+
+
+@media(max-width: 700px){
+
+
+
+body{
+      min-height: 100vh;
+
+      padding: 2rem 1rem;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      
+
+      background-color: var(--Cream);
+}
+
+.card{
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: var(--White);
+
+      border-radius: 1rem;
+}
+
+
+.card__img-mobile{
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+
+}
+
+.card__img-desktop{
+      display: none;
+}
+
+.card__content{
+      padding: 1.5rem 1rem;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      gap: 1vh;
+}
+
+.card__content-subtitle{
+      color: var(--Grey);
+}
+
+.card__content-title{
+      font-family: "Fraunces";
+      font-size: clamp(1rem, 5vh, 4rem);
+}
+
+.card__content-description{
+      line-height: 1.5rem;
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: var(--Grey);
+}
+
+
+
+
+.card__price{
+      display: flex;
+
+      align-items: center;
+
+      gap: 1.2rem;
+}
+
+.card__price-discount{
+      font-size: 2rem;
+      font-family: "Fraunces", sans-serif;
+      font-weight: 800;
+
+      color: var(--Green-500)
+}
+
+.card__price-full{
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      color: var(--Grey);
+
+      text-decoration: line-through;
+}
+
+.card__button{
+      padding: 1rem;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 0.75rem;
+
+      border-radius: 0.5rem;
+      background-color: var(--Green-500);
+}
+
+
+.card__button-logo{
+
+}
+
+.card__button-text{
+      font-weight: 500;
+      color: white;
+
+}
+
+
+}
+
+
+
+
+
+
+@media(min-width: 650px){
+
+      /* padding and margin reset */
+
+
+      body{
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+      }
+
+      .card{
+            max-width: 50rem;
+            max-height: 40rem;
+            
+            display: flex;
+            
+      }
+
+      .card > *{ /* CHILDS ARE .card__img-container and .card__content */
+            flex: 1;
+            flex-grow: 1;
+      }
+
+
+
+      .card__img-mobile{
+            display: none;
+      }
+
+      .card__img-container{
+            
+      }
+
+
+      .card__img-desktop{
+         
+            display: block;
+
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+          
+      }
+
+      .card__content{
+            padding: 2rem 4rem;
+            border: 1px solid red;
+      }
+
+
+      .card__content-subtitle{
+
+      }
+
+      .card__content-title{
+
+      }
+
+      .card__content-description{
+
+      }
+
+      .card__price{
+
+      }
+
+      .card__price-discount{
+
+      }
+
+      .card__price-full{
+
+      }
+
+      
+
+      .card__button:hover{
+            background-color: var(--Green-700);
+
+      }
+}
